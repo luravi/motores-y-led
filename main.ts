@@ -1,0 +1,30 @@
+input.onButtonPressed(Button.A, function () {
+    basic.pause(2000)
+    music.playMelody("C5 B A G F E D C ", 200)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+    strip.showColor(neopixel.colors(NeoPixelColors.Green))
+    basic.pause(2000)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+    basic.pause(2000)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(2000)
+    strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+})
+input.onButtonPressed(Button.B, function () {
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(2000)
+    strip.showColor(neopixel.colors(NeoPixelColors.Green))
+    basic.pause(2000)
+    strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+    basic.pause(2000)
+})
+let strip: neopixel.Strip = null
+basic.showIcon(IconNames.Happy)
+strip = neopixel.create(DigitalPin.P15, 4, NeoPixelMode.RGB)
+basic.forever(function () {
+	
+})
